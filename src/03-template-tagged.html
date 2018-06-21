@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>03 - Tagged Template Literal</title>
+</head>
+<style>
+  .green {
+    color: green;
+    font-size:25px;
+  }
+</style>
+<body>
+
+</body>
+<script>
+  const city = 'London';
+  const something = 'The Beatles';
+  const otherThing = 'London Eye';
+
+  function green(template, ...values) {
+    return template.reduce((accumulator, part, i) => {
+      return `
+      ${accumulator}
+      <span class="green">${values[i - 1].toUpperCase()}</span>
+      ${part}
+      `
+    });
+
+  }
+
+  const england = green`I live in ${city} and like ${something} and use to go to ${otherThing}.`;
+
+  document.body.innerHTML = england;
+</script>
+</html>
