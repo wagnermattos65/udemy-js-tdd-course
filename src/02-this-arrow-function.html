@@ -11,11 +11,13 @@
     <button id='btnArrow'>Click too!</button>
 </body>
 <script>
+  // Retorna o proprio objeto
   const btn = document.getElementById('btn');
   btn.addEventListener('click', function() {
     console.log(this);
   });
 
+  // Retorna o contexto do objeto
   const btnArrow = document.getElementById('btnArrow');
   btnArrow.addEventListener('click', () => {
     console.log(this);
