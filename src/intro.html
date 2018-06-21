@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>01 - Intro Arrow Function</title>
+</head>
+<body>
+
+</body>
+
+<script>
+  const england = ['London','Manchester','Liverpool']
+
+  const cities = england.map(function(name) {
+    return `${name} is a english city.`
+  })
+  console.log(cities)
+
+  const citiesArrow = england.map((name) => {
+    return `${name} is a english city (in a Arrow).`
+  })
+  console.log(citiesArrow)
+
+  const citiesArrowSingle = england.map(name => {
+    return `${name} is a english city (in a ArrowSingle).`
+  })
+  console.log(citiesArrowSingle)
+
+  const citiesArrowOneLine = england.map(name => `${name} is a english city (in a ArrowSingle).`)
+  console.log(citiesArrowOneLine)
+
+  citiesChain = england
+                  .filter(name => name === 'Manchester')
+                  .map(name => `${name} is the filtered city.`)
+  console.log(citiesChain)
+</script>
+</html>
