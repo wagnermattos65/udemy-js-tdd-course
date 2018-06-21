@@ -1,0 +1,24 @@
+{
+  "name": "java_tdd",
+  "version": "1.0.0",
+  "description": "Biblioteca do curso Java TDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wagnermattos/udemy-js-tdd-course.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library"
+  ],
+  "author": "Wagner Mattos <wagner_mattos@msn.com> (https://wgnr8.com.br/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wagnermattos/udemy-js-tdd-course/issues"
+  },
+  "homepage": "https://github.com/wagnermattos/udemy-js-tdd-course#readme"
+}
