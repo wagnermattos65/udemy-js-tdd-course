@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>02 - Default Parameters</title>
+</head>
+<body>
+
+</body>
+<script>
+  function hello(name, surname) {
+    console.log(`Hello ${name} ${surname}, how are you?`)
+  }
+
+  hello();
+
+  function hello2(name, surname) {
+    name = name || 'No name';
+    surname = surname || 'No surname'
+    console.log(`Hello ${name} ${surname}, how are you?`)
+  }
+
+  hello2();
+  hello2('Wagner');
+  hello2('Wagner','Mattos');
+
+  function hello3(name = 'No name', surname = 'No surname') {
+    console.log(`Hello ${name} ${surname}, how are you?`)
+  }
+
+  hello3();
+  hello3('Wagner');
+  hello3('Wagner','Mattos');
+
+</script>
+</html>

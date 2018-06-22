@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>01 - Shorthand Properties</title>
+</head>
+<body>
+
+</body>
+<script>
+  let firstname = 'Wagner';
+  let surname = 'Mattos';
+  let age = 53;
+
+  // ES5
+  const person = {
+    firstname: firstname,
+    surname: surname,
+    age: age,
+    hello: function() {
+      console.log('ES5 function')
+    }
+  }
+  console.log(person);
+  person.hello()
+
+  // ES6 shorthand (se a variavel e a propriedade tiverem o mesmo nome!)
+  const person2 = {
+    firstname,
+    surname,
+    age,
+    hello() {
+      console.log('ES6 function')
+    }
+  }
+
+  console.log(person2);
+  person2.hello();
+</script>
+</html>
