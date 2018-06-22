@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>01 - Destructing Objects</title>
+</head>
+<body>
+
+</body>
+
+<script>
+  var data = {
+      name: 'Wagner',
+      surname: 'Mattos',
+      age: 53,
+      blog: 'https://wagnermattos.com',
+      social: {
+        twitter: '@wagmattos',
+        facebook: '/wdmattos65'
+      }
+    }
+
+  const name = data.name;
+  const surname= data.surname;
+  const twitter = data.social.twitter;
+
+  console.log(name);
+  console.log(surname);
+  console.log(twitter);
+
+  const { blog, age } = data;
+  console.log(blog);
+  console.log(age);
+
+  const { facebook} = data.social;
+  console.log(facebook);
+
+  const { twitter: tw } = data.social;
+  console.log(tw);
+
+  const { myCity } = data;
+  console.log(myCity);
+
+  const {city = 'No city'} = data;
+  console.log(city);
+
+ </script>
+</html>
