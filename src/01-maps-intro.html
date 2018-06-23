@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>01 - Maps Intro</title>
+</head>
+<body>
+
+</body>
+<script>
+  let m = new Map();
+
+  m.set('Wagner',53);
+  m.set('Adriana',44);
+  m.set('Sandra',52);
+
+  console.log(m);
+  console.log(m.size);
+  m.delete('Sandra');
+  console.log(m);
+  console.log(m.has('Adriana'));
+
+  const it = m.values();
+  console.log(it.next());
+  console.log(it.next());
+  console.log(it.next());
+</script>
+</html>

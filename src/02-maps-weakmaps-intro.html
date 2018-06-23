@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>02 - Weakmaps Intro</title>
+</head>
+<body>
+
+</body>
+<script>
+   let obj1 = {
+    name: 'Wagner',
+    age: 53
+  }
+
+  let obj2 = {
+    name: 'Adriana',
+    age: 44
+  }
+
+  let wm = new WeakMap();
+
+  wm.set(obj1,'Info do Wagner');
+  wm.set(obj2,'Indo da Adriana');
+
+  console.log(wm);
+
+  obj2 = null;
+
+  setTimeout(() => {
+    console.log(wm);
+  },10000)
+
+</script>
+</html>
