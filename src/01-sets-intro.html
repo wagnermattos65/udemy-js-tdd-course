@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>01 - Sets Intro</title>
+</head>
+<body>
+
+</body>
+<script>
+  let mySet = new Set(['Adriana','Wagner','Sandra']);
+
+  console.log(mySet);
+
+  mySet.add('Juliana');
+  mySet.add('Juliana');
+  mySet.add('Juliana');
+  mySet.add('Juliana');
+  mySet.add('Sandra');
+
+  console.log(mySet)
+
+  mySet.delete('Sandra');
+
+  console.log(mySet);
+
+  console.log(mySet.has('Adriana'));
+  console.log(mySet.has('Sandra'));
+
+  console.log('id 0: ',mySet[0]); // undefined pois não é um array!
+
+  let it = mySet.values();
+  console.log(it.next());
+
+  let it2 = mySet.values();
+    for (nome of it2) {
+      console.log(nome);
+    }
+</script>
+</html>

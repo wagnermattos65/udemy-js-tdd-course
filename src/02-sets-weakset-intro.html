@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>02 - Weakset Intro</title>
+</head>
+<body>
+
+</body>
+<script>
+  let obj1 = {
+    name: 'Wagner',
+    age: 53
+  }
+
+  let obj2 = {
+    name: 'Adriana',
+    age: 44
+  }
+
+  let ws = new WeakSet([obj1,obj2]);
+
+  console.log(ws);
+  console.log(ws.has(obj1));
+  console.log(ws.has(obj2));
+  ws.add({name: 'Sandra',age: 52})
+  console.log(ws);
+  ws.delete(obj2);
+  console.log(ws);
+</script>
+</html>
