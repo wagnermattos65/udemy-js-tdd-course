@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>03 - Async/Await Multiple Promises</title>
+</head>
+<body>
+
+</body>
+<script>
+  /*
+  async function getUser() {
+    const wagnermattos = fetch('https://api.github.com/users/wagnermattos').then(r => r.json());
+    const wdmattos65 = fetch('https://api.github.com/users/wdmattos65').then(r => r.json());
+    const wgnr8 = fetch('https://api.github.com/users/wgnr8').then(r => r.json());
+
+    const promises = await Promise.all([wagnermattos,wdmattos65,wgnr8]);
+    console.log(promises);
+
+  }
+
+  getUser();
+*/
+  async function getUsers(users) {
+    const promises = users.map(user => fetch(`https://api.github.com/users/${user}`).then(r => r.json()));
+
+    const github = await Promise.all(promises);
+    console.log(github);
+    console.log(github.map(p => p.name));
+    console.log(github.map(p => p.type));
+  }
+
+  getUsers(['wagnermattos','wdmattos65','wgnr8']);
+</script>
+</html>
