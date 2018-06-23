@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>01 - Generators Intro</title>
+</head>
+<body>
+
+</body>
+  <script>
+    function getNames() {
+      console.log('Wagner');
+      console.log('Adriana');
+      console.log('Sandra');
+    }
+
+    getNames();
+
+    function* getNamesG() {
+      yield 'Adriana';
+      yield 'Wagner';
+      yield 'Sandra';
+    }
+
+    const names = getNamesG();
+
+    console.log(names);
+
+    console.log(names.next());
+    console.log(names.next());
+    console.log(names.next());
+    console.log(names.next());
+
+    const namesValues = getNamesG();
+
+    console.log(namesValues);
+
+    console.log(namesValues.next().value);
+    console.log(namesValues.next().value);
+    console.log(namesValues.next().value);
+    console.log(namesValues.next().value);
+
+  </script>
+</html>
