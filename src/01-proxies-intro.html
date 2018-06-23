@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>01 - Proxies Intro</title>
+</head>
+<body>
+
+</body>
+<script>
+  let obj = {
+    name: 'wagner',
+    age: 53
+  };
+
+  let proxy = new Proxy(obj, {
+    get(target, name) {
+      console.log('Alguem está pedindo o nome...');
+      return target[name];
+    },
+    set(target,name,value) {
+      console.log('Alguem está mudando o nome...');
+      target[name] = value.toUpperCase();
+    }
+  })
+
+  // console test commands
+  /*
+  proxy.name
+    01-proxies-intro.html:56 Alguem está pedindo o nome...
+    "wagner"
+
+  proxy.name = 'Adriana'
+    01-proxies-intro.html:60 Alguem está mudando o nome...
+    "Adriana"
+
+  proxy.name
+    01-proxies-intro.html:56 Alguem está pedindo o nome...
+    "ADRIANA"
+*/
+
+
+</script>
+</html>
