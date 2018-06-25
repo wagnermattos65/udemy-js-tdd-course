@@ -5,8 +5,17 @@
   "main": "index.js",
   "scripts": {
     "lint": "node_modules/.bin/eslint src/js/*.js",
-    "test": "./node_modules/mocha/bin/mocha tests/**/*.spec.js",
-    "test:tdd": "./node_modules/mocha/bin/mocha tests/**/*.spec.js --watch"
+    "prepush": "npm run lint && npm run test:coverage",
+    "test": "./node_modules/mocha/bin/mocha tests/**/*.spec.js --require babel-register",
+    "test:tdd": "./node_modules/mocha/bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "functions":80,
+    "lines":80,
+    "check-coverage":true,
+    "reporter": ["text","html"],
+    "exclude": ["tests/**"]
   },
   "repository": {
     "type": "git",
@@ -31,6 +40,7 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.12.0",
     "husky": "^1.0.0-rc.9",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2"
   }
 }
