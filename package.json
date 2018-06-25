@@ -4,7 +4,7 @@
   "description": "Biblioteca do curso Java TDD",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint src/*.js",
+    "lint": "node_modules/.bin/eslint src/js/*.js",
     "test": "./node_modules/mocha/bin/mocha tests/**/*.spec.js",
     "test:tdd": "./node_modules/mocha/bin/mocha tests/**/*.spec.js --watch"
   },
@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/wagnermattos/udemy-js-tdd-course#readme",
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
